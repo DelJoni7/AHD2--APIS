@@ -1,0 +1,22 @@
+<h2> Albums </h2>
+
+<p> Total de Albums: {{Albums().length}} </p>
+
+<table>
+    <thead>
+        <tr>
+            <th> UserID</th>
+            <th> ID </th>
+            <th> Titulo </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (Album of Albums(); track Album.userId){
+            <tr>
+                <td>{{Album.userId}}</td>
+                <td>{{Album.id}}</td>
+                <td>{{Album.title}}</td>
+            </tr>
+        } 
+    </tbody>
+</table>

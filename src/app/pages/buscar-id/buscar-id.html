@@ -1,0 +1,41 @@
+<h2>Buscar Usuario</h2>
+
+<input type="number" #txtId placeholder="Ingrese el ID">
+
+<button (click)="buscar(txtId.value)">
+    Buscar
+</button>
+
+<hr>
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @for(usuario of Users(); track usuario.id){
+
+        <tr>
+
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.name}}</td>
+            <td>{{usuario.email}}</td>
+
+        </tr>
+
+        }
+
+    </tbody>
+
+</table>

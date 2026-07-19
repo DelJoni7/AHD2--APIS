@@ -1,0 +1,22 @@
+<h2> Posts </h2>
+
+<p> Total de Posts: {{Posts().length}} </p>
+
+<table>
+    <thead>
+        <tr>
+            <th> ID</th>
+            <th> Titulo </th>
+            <th> Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (post of Posts(); track post.id){
+            <tr>
+                <td>{{post.id}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.body}}</td>
+            </tr>
+        } 
+    </tbody>
+</table>
